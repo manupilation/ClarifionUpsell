@@ -1,15 +1,20 @@
-const Profile = () => {
-  return (
-    <div className='provisory-wrapper'>
-      <div>
-        <img src="" alt="" />
+import KenImage from "../../../public/images/KenProfile.png";
+import Stars from "../../../public/svgs/Stars.svg";
+import VerifiedCheck from "../../../public/svgs/VerifiedCostumer.svg";
 
-        {/* 5 stars svg */}
+const Profile = (props: {classname: string}) => {
+  const {classname} = props;
+
+  return (
+    <div className={classname}>
+      <div>
+        <img src={KenImage} alt="Ken smiling." />
+
+        <img src={Stars} alt="" />
 
         <p>Ken T.</p>
 
-
-        <p>Verified Customer</p>
+        <img src={VerifiedCheck} alt="" />
       </div>
       
 
