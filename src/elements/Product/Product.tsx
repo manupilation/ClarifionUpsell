@@ -1,7 +1,9 @@
+import ClarifionP from "../../../public/images/Clarifion.png";
+
 const Product = () => {
   return (
     <div>
-      <img src="" alt="" />
+      <img src={ClarifionP} alt="" />
 
       <div className="provisory-noImageWrapper">
         <div className="provisory-TitleWrapper">
