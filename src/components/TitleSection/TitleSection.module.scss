@@ -1,5 +1,21 @@
 .titleSectionWrapper {
+  margin-top: calc(.7rem * -1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
   * {
     text-transform: capitalize;
+  }
+
+  h1 {
+    font: var(--ft-sz-lg);
+  }
+
+  p {
+    font: var(--ft-sz-bcm);
+    color: var(--col-ga);
   }
 }
