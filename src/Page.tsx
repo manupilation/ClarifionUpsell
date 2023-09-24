@@ -1,3 +1,4 @@
+import BodySection from "./components/BodySection/BodySection";
 import BrandBoxes from "./components/BrandBoxes/BrandBoxes";
 import Header from "./components/Header/Header";
 import StepList from "./components/StepList/StepList";
@@ -10,6 +11,7 @@ function App() {
       <BrandBoxes />
       <TitleSection />
       <StepList />
+      <BodySection />
     </>
   );
 }
