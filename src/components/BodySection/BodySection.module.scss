@@ -1,0 +1,71 @@
+.bodySectionContainer {
+  .bodySectionWrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    padding: 40px;
+    background-color: #FAFAFA;
+  }
+
+  .profileWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px;
+    grid-column: 1;
+
+    > div {
+      display: flex;
+      flex-direction: row;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        padding-left: 13px;
+        justify-content: center;
+
+        > img {
+          max-width: 80px;
+          margin-bottom: 8px;
+        }
+
+        > div {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            font: 600 .875rem "Manrope";
+            color: #333;
+          }
+        }
+      }
+    }
+
+    > p {
+      font: 400 1rem "Manrope";
+      color: var(--col-ga);
+      width: 100% ;
+    }
+  }
+
+  .productInfoWrapper {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+
+    > h3 {
+      font: var(--ft-sz-md);
+      margin-bottom: 32px;
+
+      span {
+        color: var(--col-bl);
+      }
+    }
+  }
+
+  margin-bottom: 60px;
+}
