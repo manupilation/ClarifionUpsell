@@ -69,3 +69,49 @@
 
   margin-bottom: 60px;
 }
+
+@media screen and (max-width: 850px) {
+  .bodySectionContainer {
+    padding: 0 20px !important;
+
+    .bodySectionWrapper {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+  
+    .profileWrapper {
+      * {
+        display: none;
+      }
+
+      > img {
+        display: none;
+      }
+
+      > div {
+        > div {
+          > div {
+            p {
+              font: 600 .765rem "Manrope";
+              color: #333;
+            }
+          }
+        }
+      }
+  
+      > p {
+        font: 400 .75rem "Manrope";
+        color: var(--col-ga);
+        width: 100% ;
+      }
+    }
+
+    .productInfoWrapper {
+      grid-column: 1;
+
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+}
