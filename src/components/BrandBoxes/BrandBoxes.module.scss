@@ -10,3 +10,23 @@
     gap: 2rem;
   }
 }
+
+@media screen and (max-width: 750px) {
+  .brandContainer {
+    padding: 0 20px !important;
+    margin: 1.25rem 0;
+    justify-content: space-between;
+
+    > img {
+      max-width: 100px;
+    }
+
+    .secures {
+      gap: 1rem;
+
+      img {
+        max-width: 50px;
+      }
+    }
+  }
+}
