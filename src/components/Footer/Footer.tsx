@@ -1,5 +1,6 @@
 import GenericMargin from "../../templates/GenericMargin";
 import FooterStyles from "./Footer.module.scss";
+import WhiteLock from "../../../public/svgs/WhiteLock.svg";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           <p>Clarifionsupport@clarifion.com</p>
         </div>
 
-        <p>Secure 256-bit SSL encryption.</p>
+        <p><img src={WhiteLock} alt="" />Secure 256-bit SSL encryption.</p>
       </footer>
     </GenericMargin>
   );

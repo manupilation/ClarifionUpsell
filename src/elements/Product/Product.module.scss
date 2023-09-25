@@ -62,3 +62,32 @@
     }
   }
 }
+
+@media screen and (max-width: 850px) {
+  .productWrapper {
+    --mg-def: .75rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    .productDetails {
+      .productPrices {
+        margin-bottom: var(--mg-def) !important;
+        p {
+          font: 600 .625rem "Manrope";
+        }
+        span {
+          font: 600 .875rem "Manrope" !important;
+        }
+      }
+
+      .productRate {
+        max-width: 68px;
+        margin-bottom: var(--mg-def);
+      }
+
+      .stock {
+        margin-bottom: var(--mg-def);
+      }
+    }
+  }
+}

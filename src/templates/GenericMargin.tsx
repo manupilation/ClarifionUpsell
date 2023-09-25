@@ -1,7 +1,7 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useContext, useEffect } from "react";
+import { mobileContext } from "../context/mobileContext";
 
 const genericMarginStyles = {padding: "0 128px"};
-const genericMarginStylesMinor = {padding: "0 64px"};
 const genericMarginStylesMobile = {padding: "0 20px"};
 
 type GenericMarginProps = {
@@ -11,8 +11,9 @@ type GenericMarginProps = {
 
 const GenericMargin = (props: GenericMarginProps) => {
   const { children } = props;
-  const [width, setWidth] = useState(0);
 
+  const {setIsMobile, isMobile} = useContext(mobileContext);
+  
   if (props.classname) return (
     <div 
       style={genericMarginStyles}
@@ -24,10 +25,13 @@ const GenericMargin = (props: GenericMarginProps) => {
 
   const updateWindowDimensions = () => {
     const newWidth = window.innerWidth;
-    setWidth(newWidth);
+
+    if (newWidth < 750) setIsMobile(true);
+    if (newWidth > 750) setIsMobile(false);
   };
 
   useEffect(() => {
+    updateWindowDimensions();
     window.addEventListener("resize", updateWindowDimensions);
 
     return () => {
@@ -35,13 +39,7 @@ const GenericMargin = (props: GenericMarginProps) => {
     };
   }, []);
 
-  if (width < 1200) return (
-    <div style={genericMarginStylesMinor}>
-      { children }
-    </div>
-  );
-
-  if (width < 700) return (
+  if (isMobile) return (
     <div style={genericMarginStylesMobile}>
       { children }
     </div>

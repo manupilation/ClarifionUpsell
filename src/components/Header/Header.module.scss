@@ -18,3 +18,16 @@
     }
   }
 }
+
+@media screen and (max-width: 750px) {
+  .headerContainer {
+    padding: 0 20px !important;
+
+    .headerWrapper {
+      span {
+        color: var(--col-ww);
+        font: 700 1.5rem "Manrope";
+      }
+    }
+  }
+}

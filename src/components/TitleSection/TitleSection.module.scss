@@ -19,3 +19,9 @@
     color: var(--col-ga);
   }
 }
+
+@media screen and (max-width: 750px) {
+  .titleSectionWrapper {
+    text-align: center;
+  }
+}
