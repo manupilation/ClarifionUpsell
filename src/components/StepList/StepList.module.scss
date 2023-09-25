@@ -33,11 +33,15 @@
     line-height: 35px;
   }
 
-  .stepComponent:nth-child(3)::before {
-    content: "3";
-    background-color: var(--col-bl);
-    color: var(--col-ww);
-    border: 2px solid transparent;
+  .stepComponent:nth-child(3) {
+    font-weight: 600;
+
+    &::before {
+      content: "3";
+      background-color: var(--col-bl);
+      color: var(--col-ww);
+      border: 2px solid transparent;
+    }
   }
 
   .stepComponent:nth-child(4)::before {
@@ -45,5 +49,37 @@
     background-color: var(--col-ww);
     color: var(--col-bl);
     border: 2px solid var(--col-bl);
+  }
+}
+
+
+@media screen and (max-width: 850px) {
+  .stepWrapper {
+    margin: 1.5rem 0 1.5rem 0;
+
+    .stepComponent:nth-child(1)::before,
+    .stepComponent:nth-child(2)::before {
+      background-size: 20px;
+    }
+
+    .stepComponent {
+      flex-direction: column;
+      justify-content: center;
+
+      &::before {
+        text-align: center;
+        margin-right: 0;
+      }
+    }
+
+    .stepComponent::before {
+      width: 20px;
+      height: 20px;
+    }
+
+    .stepComponent:nth-child(3)::before, 
+    .stepComponent:nth-child(4)::before {
+      line-height: 18px !important;
+    }
   }
 }
