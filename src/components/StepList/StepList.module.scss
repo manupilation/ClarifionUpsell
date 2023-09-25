@@ -1,0 +1,49 @@
+.stepWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3.8rem 0 2.5rem 0;
+
+  .stepComponent {
+    font: var(--ft-sz-mcm);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .stepComponent::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 1.25rem;
+    border-radius: 50%;
+  }
+
+  .stepComponent:nth-child(1)::before,
+  .stepComponent:nth-child(2)::before {
+    background: url("/public/svgs/CheckSteps.svg") no-repeat;
+  }
+
+  .stepComponent:nth-child(3)::before, 
+  .stepComponent:nth-child(4)::before {
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 35px;
+  }
+
+  .stepComponent:nth-child(3)::before {
+    content: "3";
+    background-color: var(--col-bl);
+    color: var(--col-ww);
+    border: 2px solid transparent;
+  }
+
+  .stepComponent:nth-child(4)::before {
+    content: "4";
+    background-color: var(--col-ww);
+    color: var(--col-bl);
+    border: 2px solid var(--col-bl);
+  }
+}
