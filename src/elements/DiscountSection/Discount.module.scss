@@ -81,3 +81,40 @@
     margin-bottom: 32px;
   }
 }
+
+@media screen and (max-width: 750px) {
+  .discountWrapper {
+    .discountBtn {
+      font: 600 0.875rem "Manrope";
+    }
+
+    .flagsSection {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      position: relative;
+      margin-bottom: .75rem;
+
+      p:nth-child(2)::after {
+        display: none;
+      }
+
+      .flags {
+        gap: 2px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: calc(100% - 32px);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 1px;
+          display: block;
+          background-color: #CFCFCF;
+        }
+      }
+    }
+  }
+}
