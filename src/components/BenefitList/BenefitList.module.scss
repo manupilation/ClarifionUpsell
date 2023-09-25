@@ -14,3 +14,15 @@
     color: var(--col-ga);
   }
 }
+
+@media screen and (max-width: 750px) {
+  .benefitsWrapper {
+    margin-bottom: 1.5rem;
+
+    div {
+      img {
+        width: 16px;
+      }
+    }
+  }
+}
