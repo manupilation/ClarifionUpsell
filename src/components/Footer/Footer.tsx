@@ -3,7 +3,7 @@ import FooterStyles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
-    <GenericMargin>
+    <GenericMargin classname={FooterStyles.footerContainer}>
       <footer className={FooterStyles.footerWrapper}>
         <div>
           <p>Copyright (c) 2023</p>

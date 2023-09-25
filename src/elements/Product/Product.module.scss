@@ -1,0 +1,64 @@
+.productWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-bottom: 32px;
+  
+  > img {
+    background-color: var(--col-bl);
+    border-radius: 10px;
+  }
+
+  .productDetails {
+    > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: calc(1rem - 1px);
+
+      h4 {
+        font: var(--ft-sz-mcm);
+      }
+
+      .productPrices {
+        display: flex;
+        flex-direction: row;
+        font: var(--ft-sz-scm);
+        color: #969696;
+        gap: 10px;
+
+        p {
+          text-decoration: line-through;
+        }
+
+        span {
+          color: var(--col-bl);
+          font: 600 1.375rem "Manrope";
+        }
+      }
+    }
+    .productRate {
+      max-width: 100px;
+      margin-bottom: 1rem;
+    }
+
+    .stock {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font: var( --ft-sz-scm);
+      color: #37465A;
+      margin-bottom: 16px;
+
+      img {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+    }
+
+    .explanation {
+      font: var( --ft-sz-scm);
+      color: #4D5254;
+    }
+  }
+}

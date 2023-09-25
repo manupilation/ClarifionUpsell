@@ -1,0 +1,33 @@
+.footerContainer {
+  background-color: var(--col-gb);
+  .footerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+    color: var(--col-ww);
+
+    font: var(--ft-sz-scm);
+
+    > div {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+
+      p {
+        display: flex;
+        align-items: center;
+      }
+
+      & p:first-child::after {
+        content: "";
+        width: 1px;
+        height: 24px;
+        display: inline-block;
+        background-color: var(--col-ww);
+        margin-left: 16px;
+      }
+    }
+  }
+}

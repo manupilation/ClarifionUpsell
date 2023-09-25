@@ -1,0 +1,16 @@
+.benefitsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  margin-bottom: 32px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    font: var(--ft-sz-scm);
+    color: var(--col-ga);
+  }
+}
